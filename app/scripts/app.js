@@ -14,6 +14,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/inspire', {
+        templateUrl: 'views/inspire.html',
+        controller: 'InspireCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
