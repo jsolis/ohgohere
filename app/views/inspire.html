@@ -6,7 +6,37 @@
   <h3 class="text-muted">ohgohere</h3>
 </div>
 
-<form>
-Location: <input type="text" name="location">
-etc etc
+<form role="form">
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" ng-model="itin.location" id="location" name="location" placeholder="Location">
+  </div>
+  <div class="form-group">
+    <label for="when">When</label>
+    <input type="text" class="form-control" ng-model="itin.when" id="when" name="when" placeholder="When">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Who</label>
+    <input type="text" class="form-control" ng-model="itin.who" id="who" name="who" placeholder="Who">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Place 1</label>
+    <input type="text" class="form-control" ng-model="itin.place1.name" id="place1" name="place1" placeholder="Place 1">
+    <input type="text" class="form-control" ng-model="itin.place1.why" id="why1" name="why1" placeholder="Why 1">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Place 2</label>
+    <input type="text" class="form-control" ng-model="itin.place2.name" id="place2" name="place2" placeholder="Place 2">
+    <input type="text" class="form-control" ng-model="itin.place2.why" id="why2" name="why2" placeholder="Why 2">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Place 3</label>
+    <input type="text" class="form-control" ng-model="itin.place3.name" id="place3" name="place3" placeholder="Place 3">
+    <input type="text" class="form-control" ng-model="itin.place3.why" id="why3" name="why3" placeholder="Why 3">
+  </div>
+
+  <button ng-click="postItin()" type="submit" class="btn btn-primary">Post Inspiration</button>
 </form>
