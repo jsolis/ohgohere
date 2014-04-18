@@ -7,6 +7,9 @@ angular.module('ohgohereApp')
 
     $scope.postItin = function() {
       console.log($scope.itin.location);
+      $scope.itin.place2 = $scope.itin.place2 || {};
+      $scope.itin.place3 = $scope.itin.place3 || {};
+
       $scope.itineraries.$add({
         location: $scope.itin.location,
         when: $scope.itin.when,
