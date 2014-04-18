@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('ohgohereApp')
-  .controller('InspireCtrl', ['$scop', '$firebase', '$location', function ($scope, $firebase, $location) {
-    var itineraries = new Firebase('https://ohgohere.firebaseio.com/itinerary');
-    $scope.itineraries = $firebase(itineraries);
+  .controller('InspireCtrl', ['$scope', 'ItineraryService', '$location', function ($scope, itineraryService, $location) {
+
+    $scope.itineraries = itineraryService;
 
     $scope.postItin = function() {
       console.log($scope.itin.location);
