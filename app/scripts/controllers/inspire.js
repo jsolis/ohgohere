@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ohgohereApp')
-  .controller('InspireCtrl', function ($scope, $firebase, $location) {
+  .controller('InspireCtrl', ['$scop', '$firebase', '$location', function ($scope, $firebase, $location) {
     var itineraries = new Firebase('https://ohgohere.firebaseio.com/itinerary');
     $scope.itineraries = $firebase(itineraries);
 
@@ -32,4 +32,4 @@ angular.module('ohgohereApp')
 
       $location.path('/');
     };
-  });
+  }]);
