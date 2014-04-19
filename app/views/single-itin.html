@@ -1,0 +1,18 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#/">Home</a></li>
+    <li><a ng-href="#/inspire">Inspire</a></li>
+  </ul>
+  <h3 class="text-muted">ohgohere</h3>
+</div>
+
+<div class="panel panel-info" ng-repeat="itinerary in itineraries | orderByPriority | singleItin:itinID">
+  <div class="panel-heading">
+    <h4 class="panel-title">{{itinerary.location}} <small>{{itinerary.who}} / {{itinerary.when}}</small></h4>
+  </div>
+  <div class="panel-body">
+    <p ng-repeat="place in itinerary.places">
+      {{place.name}} for {{place.why}}
+    </p>
+  </div>
+</div>

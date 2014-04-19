@@ -18,6 +18,13 @@ angular
         templateUrl: 'views/inspire.html',
         controller: 'InspireCtrl'
       })
+      .when('/search/:query', {
+
+      })
+      .when('/itin/:itinID', {
+        templateUrl: 'views/single-itin.html',
+        controller: 'SingleItinCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
