@@ -16,7 +16,9 @@
 
 <div class="panel panel-info" ng-repeat="itinerary in itineraries | orderByPriority">
   <div class="panel-heading">
-    <h4 class="panel-title">{{itinerary.location}} <small>{{itinerary.who}} / {{itinerary.when}}</small></h4>
+    <h4 class="panel-title">
+      <a href="#/itin/{{itinerary.$id}}">{{itinerary.location}} <small>{{itinerary.who}} / {{itinerary.when}}</small></a>
+    </h4>
   </div>
   <div class="panel-body">
     <p ng-repeat="place in itinerary.places">
