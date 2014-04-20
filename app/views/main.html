@@ -3,11 +3,12 @@
 <div class="jumbotron">
   <h1>Oh! Go Here!</h1>
   <p class="lead">
-    <img src="images/nut.gif" alt="I'm Yeoman"><br>
+    <img src="images/nut.png" alt="I'm Yeoman"><br>
     Let us help you find your nuts.
   </p>
 </div>
 
+<!--
 <div class="panel panel-info" ng-repeat="itinerary in itineraries | orderByPriority">
   <div class="panel-heading">
     <h4 class="panel-title">
@@ -20,6 +21,9 @@
     </p>
   </div>
 </div>
+-->
+
+<itin ng-repeat="itinerary in itineraries | orderByPriority" itinerary="itinerary"></itin>
 
 <div class="footer">
   <p><span class="glyphicon glyphicon-heart"></span> from the Oh Go Here team</p>

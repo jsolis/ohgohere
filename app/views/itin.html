@@ -1,0 +1,12 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+    	<a href="#/itin/{{itinerary.$id}}">{{itinerary.location}} <small>{{itinerary.who}} / {{itinerary.when}}</small></a>
+    </h4>
+  </div>
+  <div class="panel-body">
+    <p ng-repeat="place in itinerary.places">
+      {{place.name}} for {{place.why}}
+    </p>
+  </div>
+</div>

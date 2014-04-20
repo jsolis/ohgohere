@@ -1,12 +1,3 @@
 <navheader active-tab=""></navheader>
 
-<div class="panel panel-info" ng-repeat="itinerary in itineraries | orderByPriority | singleItin:itinID">
-  <div class="panel-heading">
-    <h4 class="panel-title">{{itinerary.location}} <small>{{itinerary.who}} / {{itinerary.when}}</small></h4>
-  </div>
-  <div class="panel-body">
-    <p ng-repeat="place in itinerary.places">
-      {{place.name}} for {{place.why}}
-    </p>
-  </div>
-</div>
+<itin ng-repeat="itinerary in itineraries | orderByPriority | singleItin:itinID" itinerary="itinerary"></itin>
