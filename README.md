@@ -13,4 +13,4 @@ Brian McCormack & Jason Solis
 ![Oh Go Here][1]
 
 
-  [1]: http://imgs.steps.dragoart.com/how-to-draw-a-squirrel-for-kids-step-7_1_000000064903_5.jpg
+  [1]: https://ohgohere.firebaseapp.com/images/55cc97f4.nut.png
