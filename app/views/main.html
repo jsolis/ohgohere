@@ -1,5 +1,18 @@
 <navheader active-tab="home"></navheader>
 
+<div class="clearfix">
+  <form xrole="form" class="pull-right" ng-submit="doSearch()" ng-controller="SearchCtrl">
+    <div class="form-group has-feedback">
+      <label for="search">Search</label>
+      <input type="text" class="form-control" id="search" name="search" placeholder="search"
+          ng-model="search" 
+          ng-trim="true"
+          required>
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+  </form>
+</div>
+
 <div class="jumbotron">
   <h1>Oh! Go Here!</h1>
   <p class="lead">
