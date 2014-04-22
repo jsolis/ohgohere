@@ -19,7 +19,8 @@ angular
         controller: 'InspireCtrl'
       })
       .when('/search/:query', {
-
+        templateUrl: 'views/search.html',
+        controller: 'SearchCtrl'
       })
       .when('/itin/:itinID', {
         templateUrl: 'views/single-itin.html',
