@@ -18,7 +18,7 @@ angular
         templateUrl: 'views/inspire.html',
         controller: 'InspireCtrl'
       })
-      .when('/search/:query', {
+      .when('/search/:searchTerm', {
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl'
       })
