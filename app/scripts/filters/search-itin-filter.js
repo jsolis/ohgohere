@@ -3,13 +3,17 @@
 angular.module('ohgohereApp')
   .filter('searchItin', function () {
     return function(input, searchTerm) {
+      searchTerm = searchTerm.toLowerCase();
       return _.filter(input, function(itin) {
         var match = false;
         var terms = searchTerm.split(' ');
+        var location = itin.location.toLowerCase();
+        var who = itin.who.toLowerCase();
+        var when = itin.when.toLowerCase();
         _.forEach(terms, function(term) {
-          if (itin.location.indexOf(term) > -1 || term.indexOf(itin.location) > -1 ||
-              itin.who.indexOf(term) > -1 || term.indexOf(itin.who) > -1 ||
-              itin.when.indexOf(term) > -1 || term.indexOf(itin.when) > -1) {
+          if (_.contains(location, term) || _.contains(term, location) ||
+              _.contains(who, term) || _.contains(term, who) ||
+              _.contains(when, term) || _.contains(term, when)) {
             match = true;
             return false;
           }
