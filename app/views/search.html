@@ -1,3 +1,5 @@
 <navheader active-tab="search"></navheader>
 
+<div ng-include="'views/search-bar.html'"></div>
+
 <itin ng-repeat="itinerary in itineraries | orderByPriority | searchItin:searchTerm" itinerary="itinerary"></itin>

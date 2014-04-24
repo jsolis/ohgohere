@@ -1,17 +1,6 @@
 <navheader active-tab="home"></navheader>
 
-<div class="clearfix">
-  <form xrole="form" class="pull-right" ng-submit="doSearch()" ng-controller="SearchCtrl">
-    <div class="form-group has-feedback">
-      <label for="search">Search</label>
-      <input type="text" class="form-control" id="search" name="search" placeholder="search"
-          ng-model="search" 
-          ng-trim="true"
-          required>
-        <span class="glyphicon glyphicon-search form-control-feedback"></span>
-    </div>
-  </form>
-</div>
+<ng-include src="'views/search-bar.html'"></ng-include>
 
 <div class="jumbotron">
   <h1>Oh! Go Here!</h1>
@@ -20,21 +9,6 @@
     Let us help you find your nuts.
   </p>
 </div>
-
-<!--
-<div class="panel panel-info" ng-repeat="itinerary in itineraries | orderByPriority">
-  <div class="panel-heading">
-    <h4 class="panel-title">
-      <a href="#/itin/{{itinerary.$id}}">{{itinerary.location}} <small>{{itinerary.who}} / {{itinerary.when}}</small></a>
-    </h4>
-  </div>
-  <div class="panel-body">
-    <p ng-repeat="place in itinerary.places">
-      {{place.name}} for {{place.why}}
-    </p>
-  </div>
-</div>
--->
 
 <itin ng-repeat="itinerary in itineraries | orderByPriority" itinerary="itinerary"></itin>
 
