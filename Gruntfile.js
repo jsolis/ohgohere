@@ -371,7 +371,16 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    ngie: {
+      dist: {
+        files: {
+          'dist/index.html': ['app/scripts/directives/*.js']
+        }
+      }
     }
+
   });
 
 
@@ -417,7 +426,8 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'ngie'
   ]);
 
   grunt.registerTask('default', [
