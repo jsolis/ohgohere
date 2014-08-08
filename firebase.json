@@ -1,4 +1,8 @@
 {
   "firebase": "ohgohere",
   "public": "dist"
+  "rewrites": [{
+    "source": "**",
+    "destination": "/"
+  }]
 }
